@@ -5,103 +5,73 @@
 }
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f1c40f;
-    height: 100vh;
-}
-.w_33_3{
-    width: 33.33%;
-    padding: 0 50px;
-    float: left;
-}
-.card_container{
-    padding-top: 115px;
+    background-color: #7f8c8d;
     overflow: hidden;
 }
-.card{
+.w-33-3{
+    float: left;
+    width: 33.33%;
+    padding: 0 20px;
+}
+.card_container {
+    padding-top: 100px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 14px 24px 3px rgb(0, 0, 0, 0.5);
+    height: 245px;
+    margin: 0 25px;
+    margin-top: 100px;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+.card_img {
+    width: 62%;
     position: relative;
-    height: 550px;
+    left: 20%;
+    top: -80px;
+    box-shadow: 0px 3px 25px 0px rgb(0 0 0 / 50%);
+    height: 242px;
+}
+.card_img img {
     width: 100%;
+    height: auto;
+}
+.card_desc {
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    transition-delay: 0s;
+}
+.card_desc h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.card_desc p{
+    font-size: 20px;
+}
+.card_desc a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: tomato;
     color: #fff;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: .5s;
-}
-.card_fornt{
-    background: url('images/ironman.png') no-repeat center / cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    transform-style: preserve-3d;
-   backface-visibility: hidden;
-   transition: .5s;
-   
-   
-}
-.card_back{
-    background: url('images/iron-man.png') no-repeat center / cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    transform: rotateY(-180deg);
-    transform-style: preserve-3d;
-   backface-visibility: hidden;
-   transition: .5s;
-   
-}
-
-.card_fornt::before, .card_back::before{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 10px;
-}
-.card_img{
-    text-align: center;
-    transform: translateZ(50px);
-}
-.card_img img{
-    width: 35%;
-}  
-.card_content{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 79%;
-    text-align: center;
-    backface-visibility: hidden;
-    transform-style:preserve-3d ;
-    transition: .5s;
-}
-.card_text{
+    padding: 15px 30px;
     font-size: 18px;
-    transform: translateZ(50px);
+    border-radius: 8px;
+    margin-top: 25px;
 }
-.card_heading{
-    font-size: 24px;
-    margin: 8px 0;
-    transform: translateZ(50px);
+.card:hover{
+    height: 545px;
+    transition-delay: 0s;
+    margin-top: 0;
 }
-.card:hover  .card_fornt{
-    transform: rotateY(180deg);
-}
-.card:hover  .card_back{
-    transform: rotateY(0deg);
-}
-.card_container .w_33_3:nth-child(2) .card_fornt{
-    background: url('images/cap.png') no-repeat center / cover; 
-}
-.card_container .w_33_3:nth-child(2) .card_back{
-    background: url('images/captain_america9.png') no-repeat center / cover; 
-}
-.card_container .w_33_3:nth-child(3) .card_fornt{
-    background: url('images/world.jpg') no-repeat center / cover; 
-}
-.card_container .w_33_3:nth-child(3) .card_back{
-    background: url('images/Transparent-Image.png') no-repeat center / cover; 
+.card:hover .card_desc{
+    transition-delay: .5s;
+    visibility: visible;
+    opacity: 1;
 }
